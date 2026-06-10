@@ -55,19 +55,27 @@ function triggerDraw() {
 }
 
 if (logoLink) {
+  // Desktop: hover
   logoLink.addEventListener('mouseenter', triggerDraw);
 
-  // On mobile, touchend on the link is more reliable than touchstart on the SVG.
-  // Delay navigation slightly so the animation has time to play before leaving.
-  logoLink.addEventListener('touchend', (e) => {
-    triggerDraw();
+  // Desktop + mobile: click/tap. Delay navigation so the animation has time
+  // to play before the page changes. No delay needed when already on this page.
+  logoLink.addEventListener('click', (e) => {
     const dest = new URL(logoLink.href, location.href).pathname;
     if (dest !== location.pathname) {
       e.preventDefault();
+      triggerDraw();
       setTimeout(() => { location.href = logoLink.href; }, 480);
+    } else {
+      triggerDraw();
     }
   });
 }
+
+// Auto-draw on every page load/refresh
+window.addEventListener('load', () => {
+  setTimeout(triggerDraw, 350);
+});
 
 // ---- Service card scroll reveal ----
 //
