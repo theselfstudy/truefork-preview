@@ -208,6 +208,7 @@ nav {
 
 @media (max-width: 640px) {
   .nav-toggle { display: flex; }
+  nav { overflow: visible; }
 
   .nav-links {
     display: none;

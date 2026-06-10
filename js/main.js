@@ -56,10 +56,17 @@ function triggerDraw() {
 
 if (logoLink) {
   logoLink.addEventListener('mouseenter', triggerDraw);
-}
 
-if (forkIcon) {
-  forkIcon.addEventListener('touchstart', triggerDraw, { passive: true });
+  // On mobile, touchend on the link is more reliable than touchstart on the SVG.
+  // Delay navigation slightly so the animation has time to play before leaving.
+  logoLink.addEventListener('touchend', (e) => {
+    triggerDraw();
+    const dest = new URL(logoLink.href, location.href).pathname;
+    if (dest !== location.pathname) {
+      e.preventDefault();
+      setTimeout(() => { location.href = logoLink.href; }, 480);
+    }
+  });
 }
 
 // ---- Service card scroll reveal ----
