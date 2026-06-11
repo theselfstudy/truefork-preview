@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body>
 
@@ -36,7 +36,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -47,6 +47,7 @@
       </button>
     </nav>
   </header>
+  <div class="nav-backdrop" aria-hidden="true"></div>
 
   <!-- ==================== MAIN ==================== -->
   <main>
@@ -56,7 +57,7 @@
       <div class="hero-content">
         <h1>With security &amp; design in mind.</h1>
         <p>Application building, security coaching, and AI literacy for small businesses, entrepreneurs, and organizations who are ready to work smarter.</p>
-        <a href="https://tidycal.com/truefork" class="btn btn-primary">Book a free 15-min call</a>
+        <a href="https://tidycal.com/mutungawinnie/intro" class="btn btn-primary">Book a free 15-min call</a>
       </div>
 
       <!-- Large ghosted fork — decorative right anchor -->
@@ -135,12 +136,179 @@
       </div>
     </section>
 
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="portfolio-inner">
+        <span class="section-label">Portfolio</span>
+        <p class="portfolio-intro">Focused tools built for real workflows: privacy-first, Google Sheets&#8209;friendly, and designed to integrate.</p>
+
+        <div class="portfolio-grid">
+
+          <!-- At the Table -->
+          <article class="app-card">
+            <div class="app-card-body">
+              <div class="app-icon">
+                <svg width="52" height="52" viewBox="60 400 1700 1290"
+                     fill="none" stroke-linecap="round" stroke-linejoin="round"
+                     overflow="visible" aria-hidden="true">
+                  <defs>
+                    <clipPath id="att-clip">
+                      <rect x="-200" y="360" width="2200" height="540"/>
+                      <path d="M96.26,833.726c-0.536,-0.54 -0.8,-0.82 -0.8,-0.82c-0,-0 4.106,0.892 5.1,-0.161c19.402,-20.543 241.561,-131.967 814.354,-131.967c588.747,0 783.934,125.081 790.137,131.967c0.096,0.107 0.144,0.161 0.144,0.161c-0,-0 -2.21,0.767 -2.261,0.82c-4.538,4.723 -209.585,216.274 -800.795,216.274c-580.513,0 -791.474,-201.78 -805.879,-216.274Z" fill="black" stroke="none"/>
+                    </clipPath>
+                  </defs>
+                  <path vector-effect="non-scaling-stroke" stroke="#3D5A6B" fill="#3D5A6B" stroke-width="1.5"
+                        d="M1705.12,835.715c13.528,48.303 -206.787,822.994 -804.326,822.994c-599.014,0 -817.926,-774.179 -804.532,-822.256c0.225,-0.807 0.452,-1.613 0.68,-2.418c19.402,-20.475 243.044,-142.443 815.837,-142.443c588.747,-0 786.071,137.02 792.274,143.883c0.022,0.08 0.045,0.16 0.067,0.24Z"/>
+                  <path stroke="none" fill="white" fill-opacity="0.18"
+                        d="M189.089,1038.04c25.495,-10.791 188.512,237.441 301.521,341.516c133.213,122.683 343.602,226.96 339.866,241.187c-8.453,32.189 -296.076,-85.974 -422.238,-223.823c-117.599,-128.495 -232.135,-353.384 -219.149,-358.88Z"/>
+                  <path vector-effect="non-scaling-stroke" stroke="#2d4452" fill="#2d4452" stroke-width="1.5"
+                        d="M96.26,833.726c-0.536,-0.54 -0.8,-0.82 -0.8,-0.82c-0,-0 4.106,0.892 5.1,-0.161c19.402,-20.543 241.561,-131.967 814.354,-131.967c588.747,0 783.934,125.081 790.137,131.967c0.096,0.107 0.144,0.161 0.144,0.161c-0,-0 -2.21,0.767 -2.261,0.82c-4.538,4.723 -209.585,216.274 -800.795,216.274c-580.513,0 -791.474,-201.78 -805.879,-216.274Z"/>
+                  <path vector-effect="non-scaling-stroke" stroke="#4A6741" fill="#4A6741" stroke-width="1.5"
+                        clip-path="url(#att-clip)"
+                        d="M781.964,1276.66c-205.954,-250.512 -413.475,-499.733 -619.429,-750.245c-2.677,-3.257 -4.612,-7.096 -6.36,-10.933c-1.702,-3.732 -3.01,-7.664 -3.939,-11.66c-0.914,-3.936 -1.429,-7.982 -1.566,-12.021c-0.137,-4.012 0.119,-8.056 0.747,-12.022c0.629,-3.966 1.635,-7.89 3.006,-11.665c1.379,-3.798 3.119,-7.487 5.206,-10.947c2.118,-3.513 4.577,-6.848 7.349,-9.872c0.012,-0.013 9.437,-8.438 9.445,-8.443c3.643,-2.12 7.096,-4.611 10.932,-6.36c3.733,-1.702 7.664,-3.009 11.66,-3.938c3.936,-0.915 7.982,-1.429 12.021,-1.567c4.013,-0.137 8.056,0.119 12.022,0.748c3.966,0.628 7.891,1.635 11.665,3.005c3.798,1.379 7.487,3.119 10.948,5.206c3.513,2.118 6.847,4.577 9.871,7.349c3.108,2.849 6.162,5.876 8.431,9.429c174.579,273.305 347.447,547.7 522.026,821.005l-4.035,2.931Z"/>
+                  <g transform="translate(-1200, -1900) scale(2)">
+                    <path vector-effect="non-scaling-stroke" stroke="#9D8189" fill="#9D8189" fill-opacity="0.65" stroke-width="1.5"
+                          d="M1066.44,700.014c0,-0 6.498,95.026 6.865,95.92c0.368,0.894 -1.656,36.017 -6.865,54.274c-5.655,19.821 -14.254,45.442 -27.067,64.654c-25.06,37.576 -96.778,118.395 -116.796,163.482c-13.683,30.817 -10.418,76.149 -4.929,104.742c4.884,25.445 17.091,49.903 32.933,70.405c17.926,23.199 74.624,68.79 74.624,68.79c1.191,5.368 -65.742,-80.419 -74.624,-127.411c-4.785,-25.312 -3.04,-51.605 4.565,-75.552c9.186,-28.924 27.337,-68.534 50.551,-97.993c26.631,-33.795 58.527,-48.204 78.348,-100.916c14.831,-39.441 10.896,-110.132 5.787,-143.972c-4.273,-28.308 -23.392,-76.423 -23.392,-76.423Z"/>
+                    <path vector-effect="non-scaling-stroke" stroke="#9D8189" fill="#9D8189" fill-opacity="0.65" stroke-width="1.5"
+                          d="M996.418,1110.58c-8.131,27.662 18.878,86.547 18.878,86.547c0,-0 -5.637,-55.423 2.66,-74.23c12.714,-28.816 59.564,-84.181 72.804,-106.553c4.403,-7.44 3.804,-25.806 3.804,-25.806c-2.136,-2.96 -87.429,83.582 -98.146,120.042Z"/>
+                    <path vector-effect="non-scaling-stroke" stroke="#9D8189" fill="#9D8189" fill-opacity="0.65" stroke-width="1.5"
+                          d="M1119.11,896.732c-0,-0 19.844,38.605 23.474,59.667c3.912,22.706 7.053,52.037 -0,76.564c-14.59,50.731 -92.269,116.669 -111.631,158.509c-13.387,28.928 -7.327,65.473 -4.541,92.532c2.492,24.202 26.373,74.771 26.373,74.771c-0,-0 -10.991,-47.764 -12.471,-65.546c-2.078,-24.972 -5.688,-67.548 12.471,-88.986c27.216,-32.132 82.698,-67.271 101.767,-105.845c19.069,-38.573 23.771,-92.936 12.648,-125.597c-12.648,-37.141 -48.09,-76.069 -48.09,-76.069Z"/>
+                  </g>
+                </svg>
+              </div>
+              <h2 class="app-name">At the Table</h2>
+              <p class="app-desc">An intuitive-eating meal tracker. Photograph your meals, log any symptoms, and view insights to your eating habits, with data syncing seamlessly to your own Google Sheet.</p>
+              <div class="app-tags">
+                <span class="tag">Next.js 14</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Google Sheets</span>
+              </div>
+              <div class="app-links">
+                <a href="https://demo.truefork.dev" class="btn btn-outline" target="_blank" rel="noopener">Try demo</a>
+              </div>
+            </div>
+            <div class="app-card-meta">
+              <span class="privacy-badge">In beta testing</span>
+            </div>
+          </article>
+
+          <!-- Cadence -->
+          <article class="app-card">
+            <div class="app-card-body">
+              <div class="app-icon">
+                <svg width="44" height="44" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M78,22 A40,40 0 1 0 78,78" fill="none" stroke="#3D5A6B" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M30,30 A28,28 0 1 1 30,70" fill="none" stroke="#4A6741" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+                  <path d="M61,39 A16,16 0 1 0 61,61" fill="none" stroke="#9D8189" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M50,56 C50,56 44,50 44,47 C44,44 46,42 50,46 C54,42 56,44 56,47 C56,50 50,56 50,56 Z" fill="#561F37"/>
+                </svg>
+              </div>
+              <h2 class="app-name">Cadence</h2>
+              <p class="app-desc">Privacy-first body tracking. Log health metrics with data stored locally or synced to your own Google Sheet, with no third-party servers.</p>
+              <div class="app-tags">
+                <span class="tag">Next.js 14</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Google Sheets</span>
+              </div>
+              <div class="app-links">
+                <a href="https://demo.truefork.dev" class="btn btn-outline" target="_blank" rel="noopener">Try demo</a>
+              </div>
+            </div>
+            <div class="app-card-meta">
+              <span class="privacy-badge">In Beta Testing</span>
+            </div>
+          </article>
+
+          <!-- Invoice Builder -->
+          <article class="app-card">
+            <div class="app-card-body">
+              <div class="app-icon">
+                <svg width="44" height="44" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="6" y="4" width="22" height="28" rx="2" fill="none" stroke="#3D5A6B" stroke-width="2.2"/>
+                  <polyline points="22,4 28,4 28,10 22,10 22,4" fill="#EEF0F2" stroke="#561F37" stroke-width="2.2" stroke-linejoin="round"/>
+                  <line x1="10" y1="15" x2="24" y2="15" stroke="#561F37" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+                  <line x1="10" y1="20" x2="24" y2="20" stroke="#561F37" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+                  <line x1="10" y1="25" x2="17" y2="25" stroke="#561F37" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+                  <circle cx="32" cy="30" r="5" fill="#561F37"/>
+                  <line x1="30" y1="30" x2="34" y2="30" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="32" y1="28" x2="32" y2="32" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h2 class="app-name">Invoice Builder</h2>
+              <p class="app-desc">Generate and export branded invoices quickly. Client info and line items sync to Google Sheets, making it easy to track billing history without a separate accounting tool.</p>
+              <div class="app-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Google Sheets</span>
+              </div>
+            </div>
+            <div class="app-card-meta">
+              <span class="privacy-badge">Private source</span>
+            </div>
+          </article>
+
+          <!-- Let's Get Beany -->
+          <article class="app-card">
+            <div class="app-card-body">
+              <div class="app-icon">
+                <svg width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M145,95 Q175,95 175,110 Q175,125 145,125" fill="none" stroke="#4A6741" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M50,80 L150,80 Q150,140 100,140 Q50,140 50,80 Z" fill="#3D5A6B" opacity="0.15" stroke="#3D5A6B" stroke-width="2"/>
+                  <ellipse cx="100" cy="80" rx="52" ry="12" fill="none" stroke="#3D5A6B" stroke-width="4"/>
+                  <ellipse cx="100" cy="80" rx="50" ry="10" fill="#9D8189" opacity="0.4"/>
+                  <g stroke="#9D8189" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7">
+                    <path d="M80,65 Q75,52 80,40"/>
+                    <path d="M100,60 Q105,47 100,34"/>
+                    <path d="M120,65 Q115,52 120,40"/>
+                  </g>
+                </svg>
+              </div>
+              <h2 class="app-name">Let's Get Beany</h2>
+              <p class="app-desc">A personal brew journal and bean catalog. Log sessions, track flavor notes, and build a record of your coffee journey, synced to your own Google Sheet.</p>
+              <div class="app-tags">
+                <span class="tag">Next.js 16</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind CSS v4</span>
+                <span class="tag">Google Sheets</span>
+              </div>
+            </div>
+            <div class="app-card-meta">
+              <span class="privacy-badge">Private source</span>
+            </div>
+          </article>
+
+          <!-- Coming soon -->
+          <article class="app-card coming-soon">
+            <div class="app-card-body">
+              <div class="app-icon">
+                <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="22" cy="22" r="18" fill="none" stroke="#9D8189" stroke-width="2" stroke-dasharray="5 4"/>
+                  <line x1="22" y1="14" x2="22" y2="22" stroke="#9D8189" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="22" y1="22" x2="28" y2="26" stroke="#9D8189" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h2 class="app-name">More coming soon</h2>
+              <p class="app-desc">The next project is in the works. Interested in having something built? Start with a free 15-minute call using the button below.</p>
+              <!-- <div class="app-links"> -->
+                <!-- <a href="https://tidycal.com/mutungawinnie/intro" class="btn btn-primary">Book a call</a> -->
+              <!-- </div> -->
+            </div>
+            <div class="app-card-meta"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Contact / CTA -->
     <section id="contact" class="contact">
       <div class="contact-inner">
         <h2>Curious on where to start?</h2>
         <p>Book a free 15-minute call with me to start a brainstorm.</p>
-        <a href="https://tidycal.com/truefork" class="btn btn-primary">Book a call</a>
+        <a href="https://tidycal.com/mutungawinnie/intro" class="btn btn-primary">Book a call</a>
       </div>
     </section>
 

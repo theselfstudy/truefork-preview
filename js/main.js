@@ -4,23 +4,32 @@
 
 // ---- Mobile nav toggle ----
 
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks  = document.querySelector('.nav-links');
+const navToggle  = document.querySelector('.nav-toggle');
+const navLinks   = document.querySelector('.nav-links');
+const navBackdrop = document.querySelector('.nav-backdrop');
+
+function closeNav() {
+  navLinks.classList.remove('is-open');
+  navToggle.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  if (navBackdrop) navBackdrop.classList.remove('is-visible');
+}
 
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('is-open');
     navToggle.classList.toggle('is-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
+    if (navBackdrop) navBackdrop.classList.toggle('is-visible', open);
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('is-open');
-      navToggle.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', closeNav);
   });
+}
+
+if (navBackdrop) {
+  navBackdrop.addEventListener('click', closeNav);
 }
 
 // ---- Fork icon draw animation (staggered left → right) ----
@@ -95,4 +104,18 @@ if (serviceCards.length) {
   }, { threshold: 0.12 });
 
   serviceCards.forEach(card => revealObserver.observe(card));
+}
+
+const appCards = document.querySelectorAll('.app-card');
+if (appCards.length) {
+  const appRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        appRevealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  appCards.forEach(card => appRevealObserver.observe(card));
 }
