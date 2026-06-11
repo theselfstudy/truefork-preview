@@ -48,7 +48,7 @@
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
 body {
   font-family: var(--font);
@@ -86,6 +86,7 @@ header {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--color-border);
+  will-change: transform;
 }
 
 nav {
@@ -95,9 +96,8 @@ nav {
   height: 88px;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: space-between;
   position: relative;
-  overflow: hidden;
 }
 
 /* ---- Logo ---- */
@@ -158,12 +158,9 @@ nav {
 /* ---- Nav links ---- */
 
 .nav-links {
-  /* Desktop: collapsed inline strip to the left of the hamburger */
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  margin-left: auto;
-  margin-right: 1.25rem;
   max-width: 0;
   overflow: hidden;
   opacity: 0;
@@ -243,8 +240,6 @@ nav {
     flex-direction: column;
     gap: 0;
     max-width: none;
-    margin-left: 0;
-    margin-right: 0;
     opacity: 1;
     overflow: visible;
     white-space: normal;
@@ -257,8 +252,6 @@ nav {
   }
 
   .nav-links.is-open { display: flex; }
-
-  .nav-toggle { margin-left: auto; }
 
   .nav-links a {
     display: block;
@@ -299,7 +292,6 @@ nav {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  will-change: transform;
   background:
     radial-gradient(ellipse 70% 60% at 68% 55%, rgba(139, 48, 82, 0.1) 0%, transparent 100%),
     var(--color-bg);
