@@ -2,6 +2,17 @@
 // TRUE FORK — main.js
 // ============================================================
 
+// ---- Scroll progress bar ----
+
+const scrollBar = document.getElementById('scroll-progress');
+if (scrollBar) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    scrollBar.style.width = (scrolled / total * 100) + '%';
+  }, { passive: true });
+}
+
 // ---- Mobile nav toggle ----
 
 const navToggle  = document.querySelector('.nav-toggle');
@@ -119,3 +130,4 @@ if (appCards.length) {
 
   appCards.forEach(card => appRevealObserver.observe(card));
 }
+
